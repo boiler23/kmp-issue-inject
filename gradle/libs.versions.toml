@@ -1,0 +1,29 @@
+[versions]
+agp = "8.1.0"
+org-jetbrains-kotlin-android = "1.8.21"
+core-ktx = "1.9.0"
+appcompat = "1.6.1"
+material = "1.9.0"
+version-google-dagger = "2.46.1"
+version-compose = "1.5.1"
+version-activity = "1.7.2"
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+google-dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "version-google-dagger" }
+google-dagger-runtime = { module = "com.google.dagger:dagger", version.ref = "version-google-dagger" }
+compose-ui-core = { module = "androidx.compose.ui:ui", version.ref = "version-compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "version-compose" }
+compose-ui-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "version-compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "version-compose" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "version-compose" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "version-activity" }
+
+[plugins]
+com-android-application = { id = "com.android.application", version.ref = "agp" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
+
+[bundles]
+
