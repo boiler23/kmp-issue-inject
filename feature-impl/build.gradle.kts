@@ -1,11 +1,11 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    kotlin("kapt")
+    id("com.google.devtools.ksp")
 }
 
 kotlin {
-    android {
+    androidTarget {
         compilations.all {
             kotlinOptions.jvmTarget = "1.8"
         }
@@ -45,7 +45,8 @@ android {
 }
 
 dependencies {
-    add("kapt", libs.google.dagger.compiler)
+    add("kspJvm", libs.google.dagger.compiler)
+    add("kspAndroid", libs.google.dagger.compiler)
 }
 
 java {
